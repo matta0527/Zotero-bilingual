@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta charset="UTF-8"/><title>刊名对照表</title>
+<style>
+body { font: 14px system-ui; padding: 18px; background: #fafafa; color: #222; }
+table { width: 100%; table-layout: fixed; border-collapse: collapse; } td,th { padding: 5px; text-align: left; }
+input,textarea { font: inherit; box-sizing: border-box; width: 100%; padding: 6px; } input { min-width: 0; }
+textarea { height: 130px; white-space: pre; overflow: auto; }
+button { padding: 6px 12px; margin: 5px; } .scroll th:last-child { width: 65px; }
+#error { color: #b00020; white-space: pre-wrap; } footer { text-align: right; margin-top: 15px; }
+.scroll { max-height: 340px; overflow-y: auto; } #filter { margin: 10px 0; }
+.example { border-collapse: collapse; margin: 8px 0; } .example td,.example th { border: 1px solid #d5dbe1; padding: 6px 8px; }
+</style><script src="journals.js"></script><script src="journal-manager.js"></script></head>
+<body><h2>刊名对照表</h2>
+<input id="filter" placeholder="搜索中文刊名、英文刊名或缩写" aria-label="搜索刊名"/>
+<div class="scroll"><table><thead><tr><th>中文刊名</th><th>英文刊名</th><th>英文缩写（可选）</th><th>操作</th></tr></thead><tbody id="journal-rows"></tbody></table></div>
+<button id="add-row">添加刊名</button>
+<details><summary>批量导入／导出</summary>
+<p>以下方表格为例，按照顺序进行填写。其中中文刊名与英文刊名必填，英文缩写选填。</p>
+<table class="example"><thead><tr><th>中文刊名</th><th>英文刊名</th><th>英文缩写（可选）</th></tr></thead><tbody>
+<tr><td>中国公路学报</td><td>China Journal of Highway and Transport</td><td>China J. Highw. Transp.</td></tr>
+</tbody></table>
+<p>从表格中复制单元格，粘贴到下方，点击“导入并合并”。检查上方列表后，点击“保存对照表”完成保存。</p>
+<textarea id="bulk" aria-label="批量刊名文本"></textarea>
+<button id="import-tsv">导入并合并</button><button id="export-tsv">生成导出文本</button></details>
+<p id="status" role="status"></p><p id="error" role="alert"></p>
+<footer><button id="cancel">取消</button><button id="save-catalog">保存对照表</button></footer>
+</body></html>

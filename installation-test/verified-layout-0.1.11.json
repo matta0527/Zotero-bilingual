@@ -1,0 +1,130 @@
+{
+  "version": "9.0.6",
+  "stage": "startup",
+  "state": 3,
+  "error": 0,
+  "addon": {
+    "id": "bilingual-records@local.invalid",
+    "isCompatible": true,
+    "appDisabled": false
+  },
+  "installed": {
+    "version": "0.1.11",
+    "isActive": true,
+    "appDisabled": false
+  },
+  "integration": [
+    {
+      "stage": "blank-document-setData",
+      "passed": true
+    },
+    {
+      "stage": "real-session-render",
+      "styleID": "http://www.zotero.org/styles/elsevier-vancouver",
+      "citation": "[1]",
+      "bibliography": "[1]\\tab Zhang S. Isolated seismic response test. Engineering Mechanics 2024;41:1\\uc0\\u8211{}10 (in Chinese).\r\n",
+      "passed": true
+    },
+    {
+      "stage": "html-language-note",
+      "styleID": "http://www.zotero.org/styles/elsevier-vancouver",
+      "html": "  <div class=\"csl-entry\">\n    <div class=\"csl-left-margin\">[1]</div><div class=\"csl-right-inline\">Zhang S. Isolated seismic response test. Engineering Mechanics 2024;41:1–10 (in Chinese).</div>\n  </div>\n",
+      "passed": true
+    },
+    {
+      "stage": "real-session-render",
+      "styleID": "http://www.zotero.org/styles/springer-basic-author-date",
+      "citation": "(Zhang 2024)",
+      "bibliography": "Zhang S (2024) Isolated seismic response test. Engineering Mechanics 41:1\\uc0\\u8211{}10 (in Chinese)",
+      "passed": true
+    },
+    {
+      "stage": "html-language-note",
+      "styleID": "http://www.zotero.org/styles/springer-basic-author-date",
+      "html": "  <div class=\"csl-entry\">Zhang S (2024) Isolated seismic response test. Engineering Mechanics 41:1–10 (in Chinese)</div>\n",
+      "passed": true
+    },
+    {
+      "stage": "document-preference-roundtrip",
+      "passed": true
+    },
+    {
+      "stage": "real-session-language-isolation",
+      "passed": true
+    }
+  ],
+  "editorURI": "chrome://bilingual-records/content/editor.xhtml",
+  "dialog": {
+    "url": "chrome://bilingual-records/content/editor.xhtml",
+    "readyState": "complete",
+    "title": "双语题录",
+    "inputs": 14
+  },
+  "layout": {
+    "saveVisible": true,
+    "shortTitleHeight": 40,
+    "titleHeight": 76,
+    "authorButton": "生成英文作者拼音",
+    "journalButton": "补全英文刊名",
+    "hint": "保留已填写的英文作者和现有英文刊名。中英文作者请按相同行号一一对应。"
+  },
+  "journals": {
+    "autofill": true,
+    "secondaryCollapsed": true,
+    "exportContainsNewRow": true,
+    "managerSavePersisted": true,
+    "newOfficialNameMatched": true
+  },
+  "contextMenu": {
+    "visibleForItem": true,
+    "icon": "url(chrome://bilingual-records/content/icons/bilingual.svg)",
+    "darkIcon": "url(chrome://bilingual-records/content/icons/bilingual-dark.svg)",
+    "iconLoaded": true,
+    "hiddenWithoutSelection": true
+  },
+  "initialValues": {
+    "zh": "测试标题",
+    "en": "Test title"
+  },
+  "titleControl": "textarea",
+  "generatedAuthors": "Zheng | Wenzhi\nOuyang | Xiu\nShan | Tianfang",
+  "savedResult": {
+    "version": 1,
+    "variants": {
+      "zh": {
+        "title": "测试标题",
+        "author": [
+          {
+            "literal": "郑文智"
+          },
+          {
+            "literal": "欧阳修"
+          },
+          {
+            "literal": "单田芳"
+          }
+        ],
+        "container-title": "隔离测试期刊"
+      },
+      "en": {
+        "title": "Changed English title",
+        "author": [
+          {
+            "family": "Custom",
+            "given": "Spelling"
+          },
+          {
+            "family": "Ouyang",
+            "given": "Xiu"
+          },
+          {
+            "family": "Shan",
+            "given": "Tianfang"
+          }
+        ],
+        "container-title": "Isolated Test Journal",
+        "container-title-short": "Isol. Test J."
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta charset="UTF-8"/><title>双语题录</title>
+<style>
+html { height: 100%; }
+body { font: 14px system-ui; padding: 16px 20px 0; margin: 0; height: 100vh; box-sizing: border-box; display: flex; flex-direction: column; overflow: hidden; color: #222; background: #fafafa; }
+.editor-content { flex: 1; min-height: 0; overflow: auto; padding-right: 6px; }
+h2 { margin: 2px 0 10px; } p { margin: 8px 0; }
+table { width: 100%; table-layout: fixed; } th { text-align: left; } td { padding: 5px; vertical-align: top; }
+input,textarea { box-sizing: border-box; width: 100%; font: inherit; padding: 6px; }
+th:first-child { width: 100px; } textarea { height: 112px; resize: vertical; white-space: pre-wrap; overflow-wrap: anywhere; } textarea.title { height: 76px; } textarea.title-short { height: 40px; min-height: 34px; }
+footer { flex-shrink: 0; padding: 12px 0; text-align: right; border-top: 1px solid #d5dbe1; background: #fafafa; }
+button { padding: 8px 22px; margin-left: 10px; } #error { color: #b00020; white-space: pre-wrap; text-align: left; }
+#author-status { color: #38516c; margin-top: 7px; } .author-tools { margin-bottom: 12px; }
+.quick-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.quick-actions button { margin-left: 0; }
+#operation-status { color: #38516c; margin-top: 7px; }
+</style><script src="vendor/pinyin-pro.js"></script><script src="authors.js"></script><script src="journals.js"></script><script src="editor.js"></script></head>
+<body><main class="editor-content"><h2>一条文献，两套题录</h2>
+<div class="author-tools"><div class="quick-actions"><button id="romanize-authors" type="button">生成英文作者拼音</button>
+<span id="journal-tools"><button id="fill-journal" type="button">补全英文刊名</button></span></div>
+<div id="author-status">保留已填写的英文作者和英文刊名，中英文作者请按相同行号一一对应。</div>
+<div id="operation-status" role="status"></div></div>
+<table><thead><tr><th>字段</th><th>中文题录</th><th>英文题录</th></tr></thead><tbody id="fields"></tbody></table>
+<details id="more-settings"><summary>更多</summary><button id="manage-journals">管理刊名对照表…</button></details>
+</main><footer><p id="error" role="alert"></p><button id="cancel">取消</button><button id="save">保存</button></footer>
+</body></html>

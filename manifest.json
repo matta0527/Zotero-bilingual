@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "双语题录 Bilingual Records",
+  "version": "0.2.0",
+  "icons": {
+    "48": "icons/bilingual.svg",
+    "96": "icons/bilingual.svg"
+  },
+  "description": "同一文献条目保存双语题录，Word 文档中可选择输出语言，匹配不同英文期刊的引用样式",
+  "applications": {
+    "zotero": {
+      "id": "bilingual-records@local.invalid",
+      "update_url": "https://example.invalid/bilingual-records/updates.json",
+      "strict_min_version": "9.0",
+      "strict_max_version": "10.0.*"
+    }
+  }
+}

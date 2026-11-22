@@ -1,0 +1,18 @@
+{
+  "version": "9.0.6",
+  "stage": "startup",
+  "state": 3,
+  "error": 0,
+  "addon": {
+    "id": "bilingual-records@local.invalid",
+    "isCompatible": true,
+    "appDisabled": false
+  },
+  "installed": {
+    "version": "0.1.2",
+    "isActive": true,
+    "appDisabled": false
+  },
+  "startupCompleted": true,
+  "environment": "isolated profile, empty database, headless"
+}
